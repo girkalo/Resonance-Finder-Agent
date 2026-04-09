@@ -1,0 +1,20 @@
+// Parameters for Macrospin_LLG
+0                  !		   FLAG GPU	
+0                  !               FLAG Fixed or dynamic polarizer
+1                  !               FLAG Seed
+1                  !seed		   Seed value
+1e-12              !dt                 Time step
+200.0e-9           !t_tot (s)          Total time of the simulation
+
+--- COMMENTS ---
+FLAG GPU:
+    0: compute on CPU
+    1: compute on GPU
+
+FLAG Fixed or dynamic polarizer:
+    0: Fixed polarizer
+    1: Dynamic polarizer
+
+FLAG Seed:
+    0: Fixed seed (1)
+    1: set seed

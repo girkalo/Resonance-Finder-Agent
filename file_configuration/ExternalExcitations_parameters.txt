@@ -1,0 +1,142 @@
+// Parameters for Macrospin_LLG
+10                  !#                           Number of frequencies
+// Current-induced spin-transfer torques (STT)
+1                  !                       FLAG Current density STT
+0-1-0              !			FLAG Current density STT type
+0.000e+00          !J_DC_STT (A/cm^2)               Current density DC STT
+5.197e+03          !J_AC_STT (A/cm^2)               Current density AC amplitude STT
+0                  !J_phi_STT (rad)                 Current density AC phase STT
+0                  !                       FLAG Current Frequency STT
+3.000e+08          !f_J_STT (Hz)                    Current frequency STT
+4.000e+08          !f_min_J_STT (Hz)                Minimum current frequency STT
+7.000e+08          !f_max_J_STT (Hz)                Maximum current frequency STT
+J_STT_pulse.txt    !filename_J_STT_pulse	    File name of pulse current STT
+1                  !                       FLAG Spin polarization function
+2.600e-01          !P                               Spin polarization
+0                  !	   FLAG field-like torque STT 
+0.000e+00          !q_STT				         Coefficient FLT STT
+// Current-induced spin-orbit torques (SOT)
+0                  !                       FLAG Current density SOT
+1-0-0              !                       FLAG Current density SOT type
+1.000e+06          !J_DC_SOT (A/cm^2)             Current density DC SOT
+1.000e+07          !J_AC_SOT (A/cm^2)             Current density AC amplitude SOT
+0                  !J_phi_SOT (rad)               Current density AC phase SOT
+0                  !                       FLAG Current Frequency SOT
+1.000e+09          !f_J_SOT (Hz)                  Current frequency SOT
+1.000e+08          !f_min_J_SOT (Hz)              Minimum current frequency SOT
+3.000e+10          !f_max_J_SOT (Hz)              Maximum current frequency SOT
+J_SOT_pulse.txt    !filename_J_SOT_pulse	      File name of pulse current SOT
+1.000e-01          !thetaSHEm			          Spin Hall angle free layer
+1.000e-01          !thetaSHEp			          Spin Hall angle polarizer
+0                  !sigmaSHE_x		              SOT x component
+1                  !sigmaSHE_y			          SOT y component
+0                  !sigmaSHE_z			          SOT z component
+0                  !				FLAG field-like torque SOT 
+0                  !q_SOT						  Coefficient FLT SOT
+// External field 
+1                  !                       FLAG External field
+1-1-0              !                       FLAG External field type
+15                 !H_DC_x (mT)                 External field DC x component
+0                  !H_DC_y (mT)                 External field DC y component
+0                  !H_DC_z (mT)                 External field DC z component
+0                  !H_AC_x (mT)                 External field AC x component
+0.000e+00          !H_AC_y (mT)                 External field AC y component
+1.000e-01          !H_AC_z (mT)                 External field AC z component
+0                  !H_phi_x (rad)               External field AC x phase  
+0                  !H_phi_y (rad)               External field AC y phase  
+0                  !H_phi_z (rad)               External field AC z phase
+0                  !                       FLAG External field frequency
+3.000e+08          !f_ext (Hz)                  External field frequency
+4.000e+08          !f_min_ext (Hz)              Minimum external field frequency
+7.000e+08          !f_max_ext(Hz)               Maximum external field frequency
+Hx_pulse.txt       !filename_Hx_pulse	      File name of external field Hx
+Hy_pulse.txt       !filename_Hy_pulse	      File name of external field Hy
+Hz_pulse.txt       !filename_Hz_pulse	      File name of external field Hz
+// Voltage-controlled magnetic anisotropy (VCMA)   
+0                  !                       FLAG VCMA (FLAG anisotropy has to be 1)
+0-0-1-0            !                       FLAG VCMA type
+10                 !VCMAm_DC (mT)                VCMA DC component free layer
+0                  !VCMAm_AC (mT)                VCMA AC component free layer
+0                  !phim_VCMA (rad)              VCMA phase free layer
+10                 !VCMAp_DC (mT)                VCMA DC component polarizer
+0                  !VCMAp_AC (mT)                VCMA AC component polarizer
+0                  !phip_VCMA (rad)              VCMA phase polarizer
+2                  !                       FLAG VCMA frequency
+2.000e+09          !f_VCMA (Hz)                 VCMA frequency 
+8.000e+09          !f_min_VCMA (Hz)             Minimum VCMA frequency
+3.000e+10          !f_max_VCMA (Hz)             Maximum VCMA frequency
+1                  !#                           fVCMA multiple of current freq STT
+VCMAm_pulse.txt    !filename_VCMAm_pulse	File name of VCMA pulse on free layer
+VCMAp_pulse.txt    !filename_VCMAp_pulse	File name of VCMA pulse on polarizer
+// Thermal field
+0                  !                       FLAG Thermal field
+3.000e+02          !T (K)                       Temperature
+
+
+--- COMMENTS ----
+Number of frequencies 
+FLAG Current density STT:
+    0: Off
+    1: On
+
+FLAG Current density STT type:
+    DC - AC - Pulse: 0 off, 1 on 
+
+FLAG Current Frequency STT:
+    0: 1 frequency. Only 'Current frequency STT' used.
+    1: Range of frequencies. 'Minimum', 'Maximum' and 'Number of frequencies' used.
+
+FLAG Spin polarization function:
+    0: g_T = P
+    1: g_T = 2P/(1+(P^2)mxp)
+
+FLAG field-like torque STT:
+    0: Off
+    1: On (FLAG Current density STT must be activated)
+
+FLAG Current density SOT:
+    0: Off
+    1: On
+
+FLAG Current density SOT type:
+    DC - AC - Pulse: 0 off, 1 on
+
+FLAG Current Frequency SOT:
+    0: 1 frequency. Only 'Current frequency SOT' used.
+    1: Range of frequencies. 'Minimum', 'Maximum' and 'Number of frequencies' used.
+
+FLAG field-like torque SOT:
+    0: Off
+    1: On (FLAG Current density SOT must be activated)
+
+FLAG External field:
+    0: Off
+    1: On
+
+FLAG External field type:
+    DC - AC - Pulse: 0 off, 1 on
+
+FLAG external field frequency:
+    0: 1 frequency. Only 'External field frequency' used.
+    1: Range of frequencies. 'Minimum', 'Maximum' and 'Number of frequencies' used.
+
+FLAG VCMA: 
+    0: Off
+    1: On
+
+FLAG VCMA type:
+    DC - AC - Pulse free layer - Pulse polarizer layer: 0 off, 1 on
+
+FLAG VCMA field frequency:
+    0: 1 frequency. Only 'VCMA Frequency' used.
+    1: Range of frequencies. 'Minimum', 'Maximum' and 'Number of frequencies' used.
+    2: multiple of current frequency/frequencies
+
+FLAG Thermal field:
+    0: Off
+    1: On
+
+** file Pulse:	     The value of current J changes over the time. The first column of the file contains the times to which a change of J corresponds; 
+		     the second column contain the value of J at the corresponding time. 
+		     The value between two J is chosen with a linear interpolation. If you want a pulse, you have to set different value of J in consecutive times.
+		     Same for VCMA and external field

@@ -1,0 +1,28 @@
+// Parameters for Macrospin_LLG
+50.0e-9            !print_time (s)		Print step
+1                  !                            FLAG for saving m_x
+1                  !                            FLAG for saving m_y
+1                  !                            FLAG for saving m_z
+1                  !save_step          Output rate for m
+1                  !                            FLAG for saving resonance data (computed on final 20% of simulation)
+
+--- COMEMNTS ---
+FLAG for saving m_x:
+	0: off
+	1: on*
+
+FLAG for saving m_y:
+	0: off
+	1: on*
+
+FLAG for saving m_z:
+	0: off
+	1: on*
+
+FLAG for saving resonance data:
+	0: off
+	1: on**
+
+Output file format:
+* The first column reppresents time in seconds. Subsequent columns correspond to the values of magnetization components for each frequency.
+** Column descriptions: STT current frequencies [Hz], SOT current frequencies [Hz], external field frequencies [Hz], VCMA frequencies [Hz], Mx oscillation amplitude, My oscillation amplitude, Mz oscillation amplitude. 

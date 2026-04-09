@@ -1,0 +1,46 @@
+// Parameters for free layer
+1.050e+06          !M_s (A/m)                 Saturation magnetization constant LF
+2.210e+05          !gamma (m/(A*s))             Gyromagnetic ratio LF
+5.000e-02          !alpha                       Gilbert damping LF
+1.660e-03          !N_x                         Demagnetizing tensor x component LF
+5.630e-03          !N_y                         Demagnetizing tensor y component LF
+9.927e-01          !N_z                         Demagnetizing tensor z component LF
+// Uniaxial anisotropy field
+1                  !                   FLAG Uniaxial anisotropy LF
+6.787e+05          !K_u (J/m^3)                 Uniaxial anisotropy coefficient LF
+0                  !                   FLAG Second order uniaxial anisotropy LF
+0                  !K_u2 (mT)                	Second order uniaxial anisotropy coefficient LF
+0                  !uk_x                      	Uniaxial anisotropy versor x component LF
+0                  !uk_y                        Uniaxial anisotropy versor y component LF
+1                  !uk_z                        Uniaxial anisotropy versor z component LF
+// Stray field from polarizer
+0                  !                       FLAG stray field LF
+9.044e-03          !Dt_x Effective demagnetizing tensor x component LF
+2.411e-02          !Dt_y Effective demagnetizing tensor y component LF
+-0.0331525737850326!Dt_z Effective demagnetizing tensor z component LF
+// Device dimension 
+1                  !                   FLAG shape LF
+700.0e-9           !len_x (m)                   Length of device x component LF
+350.0e-9           !len_y (m)                   Length of device y component LF
+1.5e-9             !len_z (m)                   Length of device z component LF
+// Initial state
+5.1251e-02         !m_x_i                       Initial magnetization x component LF
+-6.8454e-01          !m_y_i                       Initial magnetization y component LF
+7.2717e-01         !m_z_i                       Initial magnetization z component LF
+
+--- COMMENTS ---
+FLAG Uniaxial anistropy:
+    0: Off
+    1: on
+
+FLAG Second order uniaxial anistropy:
+    0: Off
+    1: on
+
+FLAG stray field:
+    0: Off
+    1: On
+
+FLAG shape:
+    0: rectangular
+    1: circular or elliptical

@@ -1,0 +1,39 @@
+// Parameters for dynamic polarizer
+8.000e+05          !M_s (A/m)                 Saturation magnetization constant LP
+2.210e+05          !gamma (m/(A*s))           Gyromagnetic ratio LP
+2.000e-02          !alpha                       Gilbert damping LP
+1.340e-02          !N_x                         Demagnetizing tensor x component LP
+4.410e-02          !N_y                         Demagnetizing tensor y component LP
+9.425e-01          !N_z                         Demagnetizing tensor z component LP
+// Uniaxial anisotropy field
+1                  !                   FLAG Uniaxial anisotropy LP
+4.300e+05          !K_u (J/m^3)                 Uniaxial anisotropy coefficient LP
+0                  !                   FLAG Second order uniaxial anisotropy LP
+0                  !K_u2 (mT)                	Second order uniaxial anisotropy coefficient LP
+0                  !uk_x                      	Uniaxial anisotropy versor x component LP
+0                  !uk_y                        Uniaxial anisotropy versor y component LP
+1                  !uk_z                        Uniaxial anisotropy versor z component LP
+// Stray field from free layer
+1                  !                       FLAG stray field LP
+2.310e-02          !Dt_x 			Effective demagnetizing tensor x component LP
+6.290e-02          !Dt_y 			Effective demagnetizing tensor y component LP
+-0.0860            !Dt_z 			Effective demagnetizing tensor z component LP
+// Device dimension
+1.0e-9             !len_z (m)                   Length of device z component LP
+// Polarizer (fix or initial state for dynamical polarizer) 
+0                  !m_x_i			      Polarizer x component LP
+0                  !m_y_i	            	Polarizer y component LP
+1                  !m_z_i	            	Polarizer z component LP
+
+--- COMMENTS ---
+FLAG Uniaxial anistropy:
+    0: Off
+    1: on
+
+FLAG Second order uniaxial anistropy:
+    0: Off
+    1: on
+
+FLAG stray field:
+    0: Off
+    1: On
